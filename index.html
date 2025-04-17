@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guithbook - Loja de eBooks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    .descricao {
+      padding: 20px;
+      text-align: center;
+      background: white;
+    }
+    .descricao p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .produto {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .produto h3 {
+      margin-bottom: 10px;
+    }
+    .produto p {
+      flex-grow: 1;
+      font-size: 0.9rem;
+    }
+    .botao {
+      margin-top: 15px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .botao:hover {
+      background: #374151;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guithbook</h1>
+    <p>A Revolução dos eBooks Começa Aqui</p>
+  </header>
+
+  <section class="descricao">
+    <p>Guithbook é sua nova loja digital de eBooks. Conteúdos exclusivos, prontos para download, em uma plataforma moderna, rápida e intuitiva. Conhecimento acessível, direto ao ponto, a um clique de distância.</p>
+  </section>
+
+  <section class="produtos">
+    <div class="produto">
+      <h3>eBook 1: Mentalidade Milionária</h3>
+      <p>Aprenda os segredos da mente empreendedora com esse guia direto ao ponto.</p>
+      <a href="#" class="botao">Comprar</a>
+    </div>
+    <div class="produto">
+      <h3>eBook 2: Marketing Digital Essencial</h3>
+      <p>Entenda como alavancar sua presença online e conquistar mais clientes.</p>
+      <a href="#" class="botao">Comprar</a>
+    </div>
+    <div class="produto">
+      <h3>eBook 3: Autoconhecimento e Poder Pessoal</h3>
+      <p>Desperte seu potencial interior com técnicas práticas e reflexões poderosas.</p>
+      <a href="#" class="botao">Comprar</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Guithbook. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
