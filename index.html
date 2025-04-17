@@ -3,112 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guithbook - Loja de eBooks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Guithbook</title>
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
     }
     body {
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #222;
     }
     header {
-      background: #111827;
+      background-color: #1e2a38;
       color: white;
-      padding: 20px;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
     header h1 {
-      font-size: 2rem;
+      margin: 0;
+      font-size: 1.8rem;
     }
-    .descricao {
-      padding: 20px;
-      text-align: center;
-      background: white;
+    header p {
+      font-size: 1rem;
+      color: #cdd6e3;
+      margin-top: 0.5rem;
     }
-    .descricao p {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .produto {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .container {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      padding: 1rem;
+      gap: 1.5rem;
     }
-    .produto h3 {
-      margin-bottom: 10px;
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: 0.3s;
     }
-    .produto p {
-      flex-grow: 1;
-      font-size: 0.9rem;
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    .botao {
-      margin-top: 15px;
-      background: #111827;
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #1e2a38;
+    }
+    .price {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    .buy-btn {
+      background-color: #0077cc;
       color: white;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      transition: background 0.3s;
+      border: none;
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .botao:hover {
-      background: #374151;
+    .buy-btn:hover {
+      background-color: #005fa3;
     }
     footer {
+      background-color: #e1e7ed;
       text-align: center;
-      padding: 20px;
-      background: #111827;
-      color: white;
-      font-size: 0.9rem;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+
+    /* Responsivo desktop */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .card {
+        width: 300px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Guithbook</h1>
-    <p>A Revolução dos eBooks Começa Aqui</p>
+    <p>Descubra ebooks únicos e transforme sua leitura</p>
   </header>
 
-  <section class="descricao">
-    <p>Guithbook é sua nova loja digital de eBooks. Conteúdos exclusivos, prontos para download, em uma plataforma moderna, rápida e intuitiva. Conhecimento acessível, direto ao ponto, a um clique de distância.</p>
-  </section>
+  <main class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png?text=Ebook+1" alt="Ebook 1" />
+      <div class="card-content">
+        <h3>Nome do Ebook</h3>
+        <p class="price">R$ 19,90</p>
+        <button class="buy-btn">Comprar Agora</button>
+      </div>
+    </div>
 
-  <section class="produtos">
-    <div class="produto">
-      <h3>eBook 1: Mentalidade Milionária</h3>
-      <p>Aprenda os segredos da mente empreendedora com esse guia direto ao ponto.</p>
-      <a href="#" class="botao">Comprar</a>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png?text=Ebook+2" alt="Ebook 2" />
+      <div class="card-content">
+        <h3>Ebook Criativo</h3>
+        <p class="price">R$ 24,90</p>
+        <button class="buy-btn">Comprar Agora</button>
+      </div>
     </div>
-    <div class="produto">
-      <h3>eBook 2: Marketing Digital Essencial</h3>
-      <p>Entenda como alavancar sua presença online e conquistar mais clientes.</p>
-      <a href="#" class="botao">Comprar</a>
-    </div>
-    <div class="produto">
-      <h3>eBook 3: Autoconhecimento e Poder Pessoal</h3>
-      <p>Desperte seu potencial interior com técnicas práticas e reflexões poderosas.</p>
-      <a href="#" class="botao">Comprar</a>
-    </div>
-  </section>
+
+    <!-- Você pode duplicar os cards acima para adicionar mais ebooks -->
+  </main>
 
   <footer>
-    &copy; 2025 Guithbook. Todos os direitos reservados.
+    &copy; 2025 Guithbook - Todos os direitos reservados
   </footer>
+
 </body>
 </html>
